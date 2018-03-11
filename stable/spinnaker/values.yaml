@@ -18,6 +18,9 @@ accounts:
 #   password: '<INSERT YOUR SERVICE ACCOUNT JSON HERE>'
 #   email: 1234@5678.com
 
+# Configure namespaces spinnaker has access to
+namespaces: []
+
 # Settings for notifications via email
 # For more info visit:
 #   https://www.spinnaker.io/setup/features/notifications/#email

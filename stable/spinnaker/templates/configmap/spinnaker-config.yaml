@@ -73,6 +73,10 @@ data:
       accounts:
         - name: ${providers.kubernetes.primaryCredentials.name}
           serviceAccount: true
+          namespaces:
+          {{- range $index, $namespace := .Values.namespaces }}
+          - {{ $namespace }}
+          {{ end }}
           dockerRegistries:
           {{- range $index, $account := .Values.accounts }}
           - accountName: {{ $account.name }}
